@@ -1,0 +1,17 @@
+﻿@page
+@using  DynamicValidationTest.Provider;
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>
+        @Html.EditorFor(a => a.TestModel.Required)
+        @Html.EditorFor(a => a.TestModel.Optional)
+
+
+        @(ValidationMetaProvider.CounterStatus)
+    </p>
+</div>
